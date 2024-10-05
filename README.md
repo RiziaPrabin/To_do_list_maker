@@ -12,6 +12,6 @@ A simple and intuitive To-Do List application that allows users to manage their 
 - Responsive Design: Works on various screen sizes with an attractive layout.
 
 # Technologies Used
-HTML: For the structure of the application.
-CSS: For styling and layout.
-JavaScript: For functionality and interactivity.
+- HTML: For the structure of the application.
+- CSS: For styling and layout.
+- JavaScript: For functionality and interactivity.
