@@ -1,0 +1,142 @@
+
+  /* Styling the body with a background image */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/009/258/310/original/set-of-to-do-list-template-with-hand-drawn-watercolor-leaf-illustration-background-vector.jpg'); /* Replace with your image URL */
+    background-size: contain; /* This will contain the image within the viewport */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* To-Do container - significantly larger */
+  .todo-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px; /* Increase padding */
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Larger width */
+    height: 700px; /* Larger height */
+    max-width: 100%;
+    text-align: center;
+    z-index: 1;
+    overflow-y: auto; /* Add scroll if needed */
+  }
+  
+  /* Larger heading */
+  h1 {
+    color: #2d3436;
+    font-size: 36px; /* Increased font size */
+    margin-bottom: 40px;
+  }
+  
+  /* Input and button container */
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  #task-input {
+    width: 75%;
+    padding: 20px; /* Larger padding for input field */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 24px; /* Larger font size */
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  #task-input:focus {
+    border-color: #74b9ff;
+  }
+  
+  button {
+    padding: 20px 30px; /* Larger button size */
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px; /* Larger font */
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #74b9ff;
+  }
+  
+  /* Task List Styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 450px; /* Adjust height based on container size */
+    overflow-y: auto;
+  }
+  
+  li {
+    background-color: #dfe6e9;
+    margin-bottom: 15px;
+    padding: 20px; /* Larger padding for tasks */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+    font-size: 22px; /* Larger task text */
+  }
+  
+  li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Completed task */
+  li.completed {
+    text-decoration: line-through;
+    color: #636e72;
+  }
+  
+  li button {
+    background-color: transparent;
+    border: none;
+    color: #d63031;
+    font-size: 22px; /* Larger delete button */
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  li button:hover {
+    color: #ff7675;
+  }
+  
+  li input[type="checkbox"] {
+    margin-right: 15px;
+    cursor: pointer;
+    transform: scale(1.5); /* Larger checkbox */
+  }
+  
+  /* Animation for new tasks */
+  .task-added {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .task-added {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Animation for task deletion */
+  .deleting {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
